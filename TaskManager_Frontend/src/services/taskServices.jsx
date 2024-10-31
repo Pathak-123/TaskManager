@@ -1,5 +1,6 @@
 import axios from 'axios';
-const API_URL  = 'http://localhost:3000/api/v1/task';
+// const API_URL  = 'http://localhost:3000/api/v1/task';
+const API_URL = 'https://taskmanager-backend-wv9r.onrender.com/api/v1/task';
 const TaskShare_PREFIX = 'sharetask/';
 
 export const getAnalyticsData = async () => {
