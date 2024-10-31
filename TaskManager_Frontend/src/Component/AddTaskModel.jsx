@@ -41,30 +41,30 @@ function AddTaskModel({openCreateTaskPopup,setOpenCreateTaskPopup,taskData,editi
     
     const handleCreateTask = async (e) => {
         e.preventDefault();
+        toast.dismiss();
         if(task?.title=== '' || task.priority==='')
         {
-          toast.error('filed all manadatroy filed');
+          toast.error('Please fill all mandatory fields');
           return ;
         }
-        if (task?.checklist?.length <1) {
-          toast.error('Please add at least one checklist item.');
+        if (task?.checklist?.length <3) {
+          toast.error('Please add at least three checklist item.');
           return;
         }
     
     const hasCheckedItem = task.checklist.some(item => item.checked);
-    const allChecklistItemsHaveTitles = task.checklist.every(item => item.title!== '');
+    const allChecklistItemsHaveValues = task.checklist.every(item => item.value.trim() !== '');
 
     if(!hasCheckedItem)
     {
-      
       toast.error('Please check at least one checklist item.');
       return;
     }
-    if (!allChecklistItemsHaveTitles) {
-      toast.error('Please provide a title for each checklist item.');
+    if (!allChecklistItemsHaveValues) {
+      toast.error('Please fill all checklist values.');
       return;
-    }
-    toast.dismiss();
+  }
+    
     setLoading(true);
        try{
         let response;
