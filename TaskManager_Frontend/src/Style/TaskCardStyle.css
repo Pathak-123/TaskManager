@@ -1,0 +1,107 @@
+.task-card-container{
+    padding: 0.8rem;
+    border-radius: 8px;
+    background-color: white;
+    margin: 0 0 0.8rem 0;
+    overflow: hidden;
+}
+.task-card-priority-container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.task-card-priority{
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+}
+.task-card-priority-value{
+    font-size: 10px;
+    text-transform: uppercase;
+    color: black;
+}
+.task-assign-name{
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background-color: #f1dfdf;
+    font-size: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.task-edit-setting{
+    position: absolute;
+    background-color: white;
+    right: 1rem;
+    top: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem 0;
+    overflow: hidden;
+}
+.task-edit-setting p{
+    padding: 0.3rem 2rem 0.3rem 0.8rem;
+    cursor: pointer;
+    color: black;
+    font-size: 10px;
+}
+.task-edit-setting p:hover{
+    background-color: #edf5fd;
+
+}
+.task-title-container{
+    margin-top: 0.4rem;
+
+}
+.task-title-container h1{
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: wrap;
+    cursor: pointer;
+   word-break: break-all;
+   line-break: auto;
+}
+.task-checklist-container{
+    margin-top: 0.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.task-checklist-container p{
+    color: black;
+    font-weight: semi-bold;
+}
+.show-checklist-icon{
+    color: gray;
+    background-color: #eeecec;
+    padding: 0.1rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.task-card-btns{
+    margin-top: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 0 1rem;
+}
+.task-type-btns{
+    display: flex;
+    align-items: center;
+    gap: 0 0.4rem;
+}
+.task-type-btn{
+    all: unset;
+    background-color: #eeecec;
+    font-size: 10px;
+    padding: 0.3rem 0.4rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    cursor: pointer;
+}

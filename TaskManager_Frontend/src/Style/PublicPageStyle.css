@@ -1,0 +1,198 @@
+.public-main-container{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    padding: 1rem;
+}
+.logo-heading{
+    display: flex;
+    align-items: center;
+    gap: 0 1rem;
+    padding: 0rem 2rem;
+}
+.logo-heading p{
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+}
+.error {
+    text-align: center;
+    color: gray;
+    margin: 5rem 1rem 3rem 1rem;
+  }
+  
+  .loader {
+    display: flex;
+    justify-content: center;
+    margin: 5rem 1rem;
+  }
+  
+  .main-div {
+    display: flex;
+    justify-content: center;
+height: 80%;  
+  margin: 1rem auto;
+    border-radius: 8px;
+    max-width: 30rem;
+    align-items: center;
+
+    
+  }
+  .main-div-center {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
+    margin: 0.6rem 0;
+    width: 30rem;
+    align-items: center;
+    border: 1px solid #17a2b8;
+
+  }
+    .priority-main-container {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+    }
+.priority-container
+{
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+}
+.priority-container p{
+    color: black;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.task-assign {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background-color: #f1dfdf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: white !important;
+    font-size: xx-small !important;
+  }
+  .title-div{
+    margin-top: 0.4rem;
+  }
+.task-title{
+    font-size: 25px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: black;
+    cursor: pointer;
+}
+.checklist
+{
+    margin-top: 0.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.checklist p{
+    color: black;
+    font-weight: semi-bold;
+}
+.checklist-inputs-container{
+    margin-top: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem 0;
+    overflow-y: auto;
+    max-height: 59vh;
+}
+.checklist-inputs{
+    display: flex;
+    gap: 10px;
+    border: 1px solid rgb(220, 216, 216);
+    border-radius: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+    margin-right: 5px;
+}
+.checklist-inputs input{
+    appearance: none; 
+    width: 20px;
+    height: 20px;
+    cursor: pointer; 
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    display: inline-block; 
+}
+
+.task-checkbox:checked{
+    background-color: #91c5cc;
+    border-color:#91c5cc ;
+}
+.task-checkbox:checked::after {
+    content: ''; 
+    position: absolute;
+    width: 4px;
+    height: 12px;
+    left: 5px;
+    border: solid white; 
+    border-width: 0 2px 2px 0; 
+    transform: rotate(45deg); 
+  }
+.task{
+    font-size: 16px;
+    flex:9;
+    cursor: pointer;
+    line-height: 22px;
+    color: #000;
+    font-weight: bold;
+}
+.checklist-inputs-container::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .checklist-inputs-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  .checklist-inputs-container::-webkit-scrollbar-thumb {
+    background: #9cb7c5;
+    border-radius: 10px;
+  }
+
+  .checklist-inputs-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  .due-date-container
+  {
+    margin-top: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0 1rem;
+  }
+  .due-date{
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+  }
+  .due-date-btn{
+    all: unset;
+    background-color:red;
+    font-size: 12px;
+    padding: 0.3rem 0.4rem;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+  }
+  @media only screen and (max-width: 720px) {
+    .main-div-center{
+        width: 90%;
+    }
+  }

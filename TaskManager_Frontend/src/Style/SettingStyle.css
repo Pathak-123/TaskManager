@@ -1,0 +1,12 @@
+.setting-main-container h2{
+    color:black;
+    font-size: 22px;
+    padding: 1.4rem 2rem;
+    width:calc(100% - 200px);
+}
+.setting-main-container form{
+    justify-content: start;
+    align-items: start;
+    padding: 1.4rem 2rem;
+
+}

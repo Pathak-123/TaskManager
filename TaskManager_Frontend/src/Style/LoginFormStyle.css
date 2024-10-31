@@ -1,0 +1,45 @@
+.form-main-container{
+    width: 100%;
+    padding: 1rem;
+}
+.form h2{
+  font-size: 40px;
+  color: black;
+}
+.form p{
+  color: black;
+
+}
+    .form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 95vh;
+      width: 100%;
+      gap: 1rem 0;
+}
+.input-main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.input-container {
+  border: 1px solid gray;
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0 0.4rem;
+  width: 20rem;
+}
+input {
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    width: 16rem;
+  }
+  .input-error {
+    font-size: 12px;
+    color: red !important;
+  }

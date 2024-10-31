@@ -1,0 +1,42 @@
+h2 {
+    font-size: 40px;
+    color: white;
+  }
+  p {
+    font-size: 18px;
+    color: white;
+  }
+  *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  .btn{
+    all: unset;
+    background-color: #17a2b8;
+    padding: 0.8rem 4rem;
+    border-radius: 3rem;
+    color: white;
+    text-align: center;
+    width: 12rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  .btn:hover{
+    filter: brightness(1.09);
+  }
+.without-fill-btn{
+  all: unset;
+  padding: 0.8rem 4rem;
+  border: 1px solid #17a2b8;
+  border-radius: 3rem;
+  color: #17a2b8;
+  text-align: center;
+  width: 12rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.home-main-container{
+  display: flex;
+  
+}

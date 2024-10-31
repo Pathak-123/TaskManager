@@ -1,0 +1,73 @@
+.dashboard-container{
+    padding: 1.4rem 2rem 0 2rem;
+    width:calc(100% - 200px);
+
+}
+.welcome-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.welcome-container h1{
+    font-size: 25px;
+    text-transform: uppercase;
+    color: black;
+}
+.welcome-container p{
+    color: gray;
+
+}
+.dashboard-header{
+    margin-top: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dashboard-header-container{
+    display: flex;
+    gap: 0 2rem;
+}
+.title-board{
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+}
+.add-people-icon{
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+    font-size: 0.9rem;
+    color: gray;
+    cursor: pointer;
+}
+.add-people-icon p{
+    color: gray;
+    font-size: 14px;
+}
+select{
+    border: none;
+outline: none;
+padding: 0.03rem;
+}
+.cards{
+    display: -webkit-box;
+    gap: 1rem 2rem;
+    overflow-x: auto;
+}
+.cards::-webkit-scrollbar {
+    height: 10px;
+  }
+
+  .cards::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  .cards::-webkit-scrollbar-thumb {
+    background: #9cb7c5;
+    border-radius: 10px;
+  }
+
+  .cards::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

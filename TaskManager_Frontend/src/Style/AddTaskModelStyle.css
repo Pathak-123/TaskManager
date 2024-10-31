@@ -1,0 +1,337 @@
+.add-task-container-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.add-task-container{
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 550px;
+    width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}  
+.date-picker-overlay {
+    position: fixed;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+  }
+.add-task-priority.active-priority{
+    background-color: #eeecec;
+    color:black;
+}
+.add-task-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem 0;  
+}
+.add-task-top-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap:10px;
+        align-items: flex-start;
+}
+.add-task-top-container label{
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+.add-task-top-container input{
+    outline: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    border: 1.5px solid rgb(207, 204, 204);
+    font-size: 14px;
+    width:100%
+}
+.add-task-priority-container{
+    display: flex;
+    align-items: center;
+    gap: 0 0.4rem;
+}
+
+.add-task-priority-container p{
+    font-size: 12px;
+    white-space: nowrap;
+    color: black;
+}
+.select-priority{
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+.add-task-priority{
+    all: unset;
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+    white-space: nowrap;
+    padding: 0.2rem 0.4rem 0.2rem 0.2rem;
+    border: 1px solid rgb(207, 204, 204);
+    border-radius: 8px;
+}
+.add-task-priority:hover{
+    cursor: pointer;
+}
+.add-task-assign-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 1rem;
+}
+.add-task-assign-container p{
+    color: black;
+    white-space: nowrap;
+    font-weight: bold;
+    font-size: 14px;
+}
+.add-task-checklist-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap:10px;
+    overflow-y: auto;
+    align-items: flex-start;position: relative;
+}
+.add-task-checklist-container p{
+    color:black;
+    font-size: 14px;
+    font-weight: bold;
+}
+.add-task-checklist-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem 0; 
+    width:100%;
+    overflow-y: auto;
+    height:130px;
+}
+.add-task-checklist-inputs::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .add-task-checklist-inputs::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  .add-task-checklist-inputs::-webkit-scrollbar-thumb {
+    background: #9cb7c5;
+    border-radius: 10px;
+  }
+
+  .add-task-checklist-inputs::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+.add-task-checklist-input-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0 0.5rem;
+    border: 1.5px solid rgb(220, 216, 216);
+    border-radius: 10px;
+    padding: 0.4rem 0.5rem;
+    margin-right: 5px;
+ 
+    
+}
+.add-task-checklist-input{
+    display: flex;
+    align-items: center;
+    gap: 0 0.4rem;
+    width: 100%;
+    height: 20px;
+    justify-content: flex-start;
+}
+.input-checklist{
+    appearance: none; 
+    width: 15px;
+    height: 15px;
+    cursor: pointer; 
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    display: inline-block; 
+}
+.input-checklist:checked{
+    background-color: #91c5cc;
+    border-color:#91c5cc ;
+}
+.input-checklist:checked::after {
+    content: ''; 
+    position: absolute;
+    width: 4px;
+    height: 8px;
+    left: 3px;
+    border: solid white; 
+    border-width: 0 2px 2px 0; 
+    transform: rotate(45deg); 
+  }
+.add-task-input-filed{
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    width:100%
+}
+.add-new-task-filed{
+      display: flex;
+      align-items: center;
+      gap: 0 1rem;
+      color: gray;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+}
+.add-task-btns{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0px;
+}
+.add-task-due-date-btn{
+    border: 1px solid gray;
+    padding:10px;
+    border-radius: 8px;
+    color: gray;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: white;
+    height:40px;
+    font-size: 14px;
+    width:150px
+}
+.required-field{
+    color:red
+}
+
+.add-task-btn{
+    display: flex;
+    justify-content: space-between;
+    gap:15px;
+    
+}
+.add-task-assign-container {
+    position: relative;
+  }
+  
+  .custom-dropdown {
+    width: 100%;
+    position: relative;
+    border: 1.5px solid rgb(207, 204, 204);
+    border-radius: 8px;
+    color: gray;
+    padding: 0.4rem 1rem;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:35px
+  }
+  
+  .add-task-assign-container {
+    position: relative;
+  }
+  
+  .custom-dropdown {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+  
+  .dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    position: relative;
+  }
+  
+  .dropdown-icon {
+    font-size: 1em;
+    color: #555;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    left: 28px; 
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    padding: 0.5rem 0;
+    z-index: 2000; 
+    max-height: 128px; 
+    overflow-y: auto; 
+    word-break: break-all;
+    line-break: auto;
+}
+.dropdown-item {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 2001;
+    gap: 10px;
+}
+
+  
+  .dropdown-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .assign-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 0.85em;
+    margin-left: auto;
+    cursor: pointer;
+  }
+  
+  .assign-btn:hover {
+    background-color: #0056b3;
+  }
+  .user-email{
+    flex:6;
+  }
+  .dropdown-item button{
+   width: 100px;
+  }
