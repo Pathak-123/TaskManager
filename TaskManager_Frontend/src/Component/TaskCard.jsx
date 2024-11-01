@@ -136,8 +136,8 @@ const totalCount = task.checklist.length;
       <div>
           <button className='due-date-btn'  style={{
     backgroundColor: 
-     task.type === 'done' ? 'green' :
-     formatToDateObject(task.dueDate) < new Date() || task.type === 'backlog' ? 'red' : 'gray',
+     task.type === 'DONE' ? 'green' :
+     formatToDateObject(task.dueDate) < new Date() || task.type === 'BACKLOG' ? 'red' : 'gray',
   }}>{formatDateToDayMonth(task.dueDate)}</button>
     
       </div> : <div></div>

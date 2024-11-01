@@ -104,8 +104,9 @@ const shareTask=async(req,res)=>{
                     success: false,
                     message: 'Task not found'
                 });
+                const shortenedTitle = task.title.length > 20 ? task.title.slice(0, 20) : task.title;
     
-                const slugTitle=slugify(task.title,{lower:true,strict:true});
+                const slugTitle=slugify(shortenedTitle,{lower:true,strict:true});
                 const taskLink=`${slugTitle}_${task._id}`;
     
                return res.status(200).json({

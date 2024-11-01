@@ -134,6 +134,7 @@ height: 80%;
 .task-checkbox:checked{
     background-color: #91c5cc;
     border-color:#91c5cc ;
+    cursor: default;
 }
 .task-checkbox:checked::after {
     content: ''; 

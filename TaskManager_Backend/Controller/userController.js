@@ -292,7 +292,8 @@ const addPeople = async (req, res) => {
 
 const getAllMyAssignees = async (req, res) => {
     try {
-        const users = await User.find({}, 'email name'); 
+      const currentUserEmail = req.user.email;
+        const users = await User.find({email: { $ne: currentUserEmail } }, 'email name'); 
         const formattedUsers = users.map(user => {
             const username = user.email.split('@')[0]; 
 
