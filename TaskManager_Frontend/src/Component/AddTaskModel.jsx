@@ -207,6 +207,7 @@ selected={task.dueDate ? parseDate(task.dueDate) : null} onChange={handleDateCha
             id="title"
             placeholder="Enter Task Title"
             value={task.title}
+            disabled={loading}
           />
         </div>
         <div className='add-task-priority-container'>
@@ -218,6 +219,7 @@ selected={task.dueDate ? parseDate(task.dueDate) : null} onChange={handleDateCha
             onClick={() => handleChangePriority("high")}
             type="button"
             className={`add-task-priority ${task.priority === 'high' ? 'active-priority':''}`}
+            disabled={loading}
           >
             <FontAwesomeIcon icon={faCircle} style={{color:"#ff2473" , fontSize:'10px'}}/>
             <p>HIGH PRIORITY</p>
@@ -226,6 +228,7 @@ selected={task.dueDate ? parseDate(task.dueDate) : null} onChange={handleDateCha
             onClick={() => handleChangePriority("moderate")}
             type="button"
             className={`add-task-priority ${task.priority === 'moderate' ? 'active-priority':''}`}
+            disabled={loading}
           >
             <FontAwesomeIcon icon={faCircle} style={{color:"blue" , fontSize:'10px'}}/>
             <p>MODERATE PRIORITY</p>
@@ -234,6 +237,7 @@ selected={task.dueDate ? parseDate(task.dueDate) : null} onChange={handleDateCha
             onClick={() => handleChangePriority("low")}
             type="button"
             className={`add-task-priority ${task.priority === 'low' ? 'active-priority':''}`}
+            disabled={loading}
           >
             <FontAwesomeIcon icon={faCircle} style={{color:"green" , fontSize:'10px'}}/>
             <p>LOW PRIORITY</p>
@@ -302,6 +306,7 @@ selected={task.dueDate ? parseDate(task.dueDate) : null} onChange={handleDateCha
                     onChange={(e) =>
                         handleChangeOptionCheckList(index)
                     }
+                    disabled={loading}
                   />
                   <input
                     style={{ border: "none", outline: "none", width: "100%" ,color:'black'}}
@@ -309,10 +314,11 @@ selected={task.dueDate ? parseDate(task.dueDate) : null} onChange={handleDateCha
                     className='add-task-input-filed'
                     placeholder="Task content"
                     value={checklistItem.value}   
+                    disabled={loading}
                     onChange={(e) => handleChangeOptionTaskTitle(index,e.target.value)}
                   />
                 </div>
-                <FontAwesomeIcon icon={faTrash} style={{ fontSize: '14px', color: 'red' ,cursor: "pointer" }} onClick={()=>handleDeleteCheckList(index)}/>
+                <FontAwesomeIcon icon={faTrash} style={{ fontSize: '14px', color: 'red' ,cursor: "pointer" }} onClick={()=>handleDeleteCheckList(index)}  disabled={loading}/>
               </div>
              ))       
             }  
@@ -322,7 +328,7 @@ selected={task.dueDate ? parseDate(task.dueDate) : null} onChange={handleDateCha
           <div className='add-new-task-filed' onClick={handleAddChecklist}>
           <FontAwesomeIcon
            icon={faPlus}
-           style={{cursor:'pointer',fontSize: '14px', }}
+           style={{cursor:'pointer',fontSize: '14px', }}  disabled={loading}
          />  
             Add New
           </div>
@@ -355,7 +361,7 @@ selected={task.dueDate ? parseDate(task.dueDate) : null} onChange={handleDateCha
             >
               Cancel
             </button>
-            <button type="submit" className='popup-logout-btn'  style={{borderRadius:'10px',width:'150px',height:'40px',padding:'0px',fontSize:'16px',cursor: loading ? "not-allowed" : "pointer"}} onClick={handleCreateTask}>
+            <button type="submit" className='popup-logout-btn'  style={{borderRadius:'10px',width:'150px',height:'40px',padding:'0px',fontSize:'16px',cursor: loading ? "not-allowed" : "pointer"}} disabled={loading} onClick={handleCreateTask}>
             {loading
                   ? editingTask
                     ? "Updating..."
