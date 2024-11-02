@@ -39,7 +39,7 @@ const createTask=async(req,res)=>{
 }
 
 const editTask=async(req,res)=>{
-    const { type, title, priority, assignedTo, checklist, dueDate } = req.body;
+    const { type, title, priority, assignTo, checklist, dueDate } = req.body;
     try{
         const taskId=req.params.taskId;
         const task=  await Task.findById(taskId);
@@ -51,9 +51,9 @@ const editTask=async(req,res)=>{
 
         if(title) task.title=title;
         if(priority) task.priority=priority;
-        if(assignedTo) task.assignedTo=assignedTo;
         if(checklist) task.checklist=checklist;
         if(dueDate) task.dueDate=dueDate;
+         task.assignedTo=assignTo;
 
         await task.save();
 

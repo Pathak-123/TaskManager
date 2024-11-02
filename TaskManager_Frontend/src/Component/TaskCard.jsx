@@ -32,7 +32,7 @@ const handleShare = async (taskId) => {
 useEffect(() => {
   setShowChecklistData(!collapseAllChecklists);
 }, [collapseAllChecklists]);
-const taskType=['PROGRESS','TODO','DONE','BACKLOG'];
+const taskType=['progress','todo','done','backlog'];
 const checkedCount = task.checklist.filter(item => item.checked).length;
 const totalCount = task.checklist.length;
   return (
@@ -136,8 +136,8 @@ const totalCount = task.checklist.length;
       <div>
           <button className='due-date-btn'  style={{
     backgroundColor: 
-     task.type === 'DONE' ? 'green' :
-     formatToDateObject(task.dueDate) < new Date() || task.type === 'BACKLOG' ? 'red' : 'gray',
+     task.type === 'done' ? 'green' :
+     formatToDateObject(task.dueDate) < new Date() || task.type === 'backlog' ? 'red' : 'gray',
   }}>{formatDateToDayMonth(task.dueDate)}</button>
     
       </div> : <div></div>
@@ -145,7 +145,7 @@ const totalCount = task.checklist.length;
 
       <div className='task-type-btns' >
       {taskType
-    .filter((type) => type !== task.type.toUpperCase())
+    .filter((type) => type !== task.type)
     .map((type, index) => (
       <button key={index} className="task-type-btn" onClick={()=>updateTaskType(task,type)}>
         {type}

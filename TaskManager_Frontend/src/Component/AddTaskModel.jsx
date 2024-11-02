@@ -5,7 +5,7 @@ import '../Style/TaskCardStyle.css';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircle ,faTrash,faPlus ,faChevronDown} from '@fortawesome/free-solid-svg-icons';
+import { faCircle ,faTrash,faPlus ,faChevronDown, faLeftLong} from '@fortawesome/free-solid-svg-icons';
 import { createTask, updateTask } from '../services/taskServices';
 import { toast } from 'react-toastify';
 import { getAssignee } from '../services/userServices';
@@ -265,8 +265,14 @@ selected={task.dueDate ? parseDate(task.dueDate) : null} onChange={handleDateCha
         <div className='add-task-checklist-container'>
         {showAssigneeDropdown && (
               <div className='dropdown-menu'>
+              <div 
+      className='dropdown-item' 
+      onClick={() => handleChangeAssignee('')}
+    >
+      <span style={{ marginLeft: '2rem' }}>Select an assignee</span>
+    </div>
                 {assignee.map((user, index) => (
-                  <div key={index} className='dropdown-item'>
+                  <div key={index} className='dropdown-item' onClick={() => handleChangeAssignee(user.email)}>
                     <span className='task-assign-name'>{user.name}</span>
                     <span className='user-email'>{user.email}</span>
                     <button type="button"
