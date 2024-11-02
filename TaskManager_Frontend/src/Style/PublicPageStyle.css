@@ -121,11 +121,10 @@ height: 80%;
 .checklist-inputs input{
     appearance: none; 
     width: 20px;
-    height: 20px;
-    cursor: pointer; 
+    height: 20px; 
     border: 2px solid #ccc;
     border-radius: 4px;
-    cursor: pointer;
+    cursor: default;
     position: relative;
     background-color: transparent;
     display: inline-block; 

@@ -12,11 +12,11 @@ function LogoutModel({ openLogoutPopup, setOpenLogoutPopup, title, id }) {
       {
        const response =  await deleteTask(id);
        if(response.success){
-        toast.success('Task Deleted Successfully !', { autoClose: 1000 });
+        toast.success('Task Deleted Successfully !', { autoClose: 500 });
         setOpenLogoutPopup(!openLogoutPopup);
         setTimeout(() => {
           window.location.reload();
-        }, 1000);
+        }, 500);
 
        }
         

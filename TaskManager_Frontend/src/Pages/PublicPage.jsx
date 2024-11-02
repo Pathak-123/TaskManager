@@ -7,12 +7,14 @@ import LogoImage from '../assets/logo.svg';
 import { getSharedTask } from '../services/taskServices';
 import Loader from '../Component/Loader';
 import { getInitials } from '../utils/helperFunction';
+import PageNotFound from './PageNotFound';
 
 
 function PublicPage() {
   const { slugID } = useParams(); 
     const [task, setTask] = useState({});
     const [loading, setLoading] = useState(true);
+    const [hasError, setHasError] = useState(false);
 
     useEffect(() => {
       const fetchTaskData = async () => {
@@ -21,6 +23,7 @@ function PublicPage() {
           setTask(task);
           setLoading(false);
         } catch (error) {
+          setHasError(true);
           console.error('Failed to fetch quiz data:', error.message);
         }
         finally{
@@ -33,7 +36,7 @@ function PublicPage() {
     const checkedCount = Array.isArray(task.checklist) ? task.checklist.filter(item => item.checked).length : 0;
     const totalCount = Array.isArray(task.checklist) ? task.checklist.length : 0;
 
-  
+    if (hasError) return <PageNotFound />;
 
   return (
     <div className='public-main-container'>
